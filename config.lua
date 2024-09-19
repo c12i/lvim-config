@@ -46,13 +46,14 @@ lvim.plugins = {
       })
     end,
   },
-  {
-    "andymass/vim-matchup",
-    event = "CursorMoved",
-    config = function()
-      vim.g.matchup_matchparen_offscreen = { method = "popup" }
-    end,
-  },
+  { "tpope/vim-fugitive" }
+  --{
+  --"andymass/vim-matchup",
+  --event = "CursorMoved",
+  --config = function()
+  --vim.g.matchup_matchparen_offscreen = { method = "popup" }
+  --end,
+  --},
 }
 
 lvim.colorscheme = "gruvbox"
@@ -62,4 +63,43 @@ lvim.format_on_save.enabled = true
 -- keybinds
 lvim.keys.normal_mode["<C-t>"] = ":pop<cr>"
 
+-- vim fugitive keybinds
+lvim.keys.normal_mode["<leader>gs"] = ":Git<CR>"
+lvim.keys.normal_mode["<leader>gc"] = ":Git commit<CR>"
+lvim.keys.normal_mode["<leader>gp"] = ":Git push<CR>"
+
 lvim.builtin.treesitter.matchup.enable = true
+
+-- prettier
+-- local formatters = require "lvim.lsp.null-ls.formatters"
+-- formatters.setup {
+--   {
+--     command = "prettier",
+--     filetypes = {
+--       "javascript",
+--       "typescript",
+--       "css",
+--       "scss",
+--       "html",
+--       "json",
+--       "yaml",
+--       "markdown",
+--       "graphql"
+--     },
+--   },
+-- }
+
+-- eslint
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+  {
+    command = "eslint",
+    filetypes = {
+      "javascript",
+      "typescript",
+      "javascriptreact",
+      "typescriptreact",
+      "vue",
+    },
+  },
+}
