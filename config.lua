@@ -15,3 +15,6 @@ require("user.keymaps")
 
 -- LSP and formatting
 require("user.lsp")
+
+-- Custom Telescope configuration
+require("user.telescope").setup()
