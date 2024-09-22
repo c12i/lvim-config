@@ -1,5 +1,9 @@
 local plugins = {
-  { "ellisonleao/gruvbox.nvim",     priority = 1000,                 config = true,  opts = ... },
+  {
+    "ellisonleao/gruvbox.nvim",
+    priority = 1000,
+    config = true
+  },
   {
     "phaazon/hop.nvim",
     event = "BufRead",
@@ -33,7 +37,11 @@ local plugins = {
     end,
   },
   { "tpope/vim-fugitive" },
-  { "iamcco/markdown-preview.nvim", build = "cd app && npm install", ft = "markdown" },
+  {
+    "iamcco/markdown-preview.nvim",
+    build = "cd app && npm install",
+    ft = "markdown"
+  },
   {
     "nvim-telescope/telescope-file-browser.nvim",
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
