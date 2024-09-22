@@ -10,11 +10,6 @@ local plugins = {
     end,
   },
   {
-    'mrcjkb/rustaceanvim',
-    version = '^4',
-    ft = { 'rust' },
-  },
-  {
     "ggandor/leap.nvim",
     name = "leap",
     config = function()
