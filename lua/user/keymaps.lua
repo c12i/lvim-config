@@ -26,3 +26,10 @@ map("n", "gR", "<cmd>TroubleToggle lsp_references<cr>")
 
 -- Spectre keymaps
 map("n", "<c-s>", "<cmd>lua require('spectre').toggle()<CR>", { desc = "Toggle Spectre" })
+
+-- foldclose keymaps
+vim.opt.foldlevel = 99
+vim.opt.foldmethod = "expr" -- alts: "sytax" or "indent"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+lvim.keys.normal_mode["<leader>z"] = ":foldclose<CR>"
+lvim.keys.normal_mode["<leader>zz"] = ":foldopen<CR>"

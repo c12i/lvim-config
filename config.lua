@@ -7,6 +7,7 @@
 lvim.colorscheme = "gruvbox"
 lvim.format_on_save.enabled = true
 
+
 -- Plugin management
 require("user.plugins")
 
