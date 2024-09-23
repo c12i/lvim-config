@@ -1,6 +1,4 @@
---[[
 -- Typescript language server configurations
-]]
 
 local M = {}
 

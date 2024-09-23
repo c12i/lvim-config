@@ -1,7 +1,3 @@
--- [[
--- General LSP configurations
-]] 
-
 -- setup formatters
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {

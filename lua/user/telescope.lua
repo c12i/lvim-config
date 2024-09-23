@@ -1,6 +1,4 @@
--- [[
 -- Telescope Configurations
-]]
 
 local M = {}
 
