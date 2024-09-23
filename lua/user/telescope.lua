@@ -1,3 +1,7 @@
+-- [[
+-- Telescope Configurations
+]]
+
 local M = {}
 
 M.setup = function()

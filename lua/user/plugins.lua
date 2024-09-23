@@ -14,6 +14,13 @@ local plugins = {
     end,
   },
   {
+    'mrcjkb/rustaceanvim',
+    version = '^5',
+    lazy = false,
+  },
+  { "jose-elias-alvarez/nvim-lsp-ts-utils" },
+  { "jose-elias-alvarez/null-ls.nvim" },
+  {
     "ggandor/leap.nvim",
     name = "leap",
     config = function()

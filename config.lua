@@ -6,7 +6,9 @@
 -- General settings
 lvim.colorscheme = "gruvbox"
 lvim.format_on_save.enabled = true
-
+-- enable auto-completion
+lvim.builtin.cmp.enabled = true
+lvim.builtin.nvimtree.setup.view.width = 35
 
 -- Plugin management
 require("user.plugins")
@@ -19,3 +21,6 @@ require("user.lsp")
 
 -- Custom Telescope configuration
 require("user.telescope").setup()
+
+-- language specific LSP configurations
+require("user.lsp-servers.typescript").setup()

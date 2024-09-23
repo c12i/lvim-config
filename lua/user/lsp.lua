@@ -1,3 +1,8 @@
+-- [[
+-- General LSP configurations
+]] 
+
+-- setup formatters
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   {
@@ -48,3 +53,4 @@ lvim.builtin.neo_tree.config.diagnostics = {
     error = "",
   },
 }
+
