@@ -14,8 +14,8 @@ local plugins = {
     end,
   },
   {
-    'mrcjkb/rustaceanvim',
-    version = '^5',
+    "mrcjkb/rustaceanvim",
+    version = "^5",
     lazy = false,
   },
   { "jose-elias-alvarez/nvim-lsp-ts-utils" },
@@ -28,7 +28,7 @@ local plugins = {
     end,
   },
   {
-    'wfxr/minimap.vim',
+    "wfxr/minimap.vim",
     build = "cargo install --locked code-minimap",
     config = function()
       vim.cmd("let g:minimap_width = 10")
@@ -44,6 +44,7 @@ local plugins = {
     end,
   },
   { "tpope/vim-fugitive" },
+  { "mbbill/undotree" },
   {
     "iamcco/markdown-preview.nvim",
     build = "cd app && npm install",
@@ -63,7 +64,7 @@ local plugins = {
   {
     "lewis6991/gitsigns.nvim",
     config = function()
-      require('gitsigns').setup()
+      require("gitsigns").setup()
     end
   },
   {

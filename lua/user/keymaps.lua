@@ -34,3 +34,6 @@ vim.opt.foldmethod = "expr" -- alts: "sytax" or "indent"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 lvim.keys.normal_mode["<leader>z"] = ":foldclose<CR>"
 lvim.keys.normal_mode["<leader>zz"] = ":foldopen<CR>"
+
+-- undotree keymaps
+lvim.keys.normal_mode["<leader>U"] = ":UndotreeToggle<CR>"
