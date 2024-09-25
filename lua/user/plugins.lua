@@ -5,15 +5,6 @@ local plugins = {
     config = true
   },
   {
-    "phaazon/hop.nvim",
-    event = "BufRead",
-    config = function()
-      require("hop").setup()
-      vim.api.nvim_set_keymap("n", "s", ":HopChar2<cr>", { silent = true })
-      vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
-    end,
-  },
-  {
     "mrcjkb/rustaceanvim",
     version = "^5",
     lazy = false,
@@ -77,13 +68,6 @@ local plugins = {
     "nvim-treesitter/nvim-treesitter-context",
     config = function()
       require("treesitter-context").setup {}
-    end
-  },
-  {
-    "folke/trouble.nvim",
-    dependencies = "nvim-tree/nvim-web-devicons",
-    config = function()
-      require("trouble").setup {}
     end
   },
   {
