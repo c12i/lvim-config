@@ -13,7 +13,7 @@ M.setup = function()
   lspconfig.tsserver.setup({
     on_attach = function(client, bufnr)
       -- auto-imports
-      client.resolved_capabilities.document_formatting = false
+      -- client.resolved_capabilities.document_formatting = false
       local ts_utils = require("nvim-lsp-ts-utils")
       ts_utils.setup({
         auto_inlay_hints = true,

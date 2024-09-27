@@ -5,9 +5,6 @@ local function map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
--- General keymaps
-map("n", "<C-t>", ":pop<cr>")
-
 -- Vim fugitive keymaps
 map("n", "<leader>gs", ":Git<CR>")
 map("n", "<leader>gc", ":Git commit<CR>")
