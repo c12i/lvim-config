@@ -10,6 +10,11 @@ lvim.format_on_save.enabled = true
 lvim.builtin.cmp.enabled = true
 lvim.builtin.nvimtree.setup.view.width = 35
 
+-- show mode in status line
+lvim.builtin.lualine.sections.lualine_a = {
+  { "mode", color = { gui = "bold" } }
+}
+
 -- Plugin management
 require("user.plugins")
 
