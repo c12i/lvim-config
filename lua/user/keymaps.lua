@@ -26,3 +26,7 @@ lvim.keys.normal_mode["<leader>zz"] = ":foldopen<CR>"
 
 -- undotree keymaps
 lvim.keys.normal_mode["<leader>U"] = ":UndotreeToggle<CR>"
+
+-- Todo keymaps
+lvim.keys.normal_mode["<leader>tt"] = ":TodoTelescope<CR>"
+lvim.keys.normal_mode["<leader>tl"] = ":TodoLocList<CR>"
