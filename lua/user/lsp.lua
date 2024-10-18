@@ -6,6 +6,8 @@ formatters.setup {
     filetypes = {
       "javascript",
       "typescript",
+      "javascriptreact",
+      "typescriptreact",
       "css",
       "scss",
       "html",
