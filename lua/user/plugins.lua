@@ -9,6 +9,13 @@ local plugins = {
     version = "5",
     lazy = false,
   },
+  {
+    "ruifm/gitlinker.nvim",
+    dependencies = "nvim-lua/plenary.nvim",
+    config = function()
+      require("gitlinker").setup()
+    end,
+  },
   { "jose-elias-alvarez/nvim-lsp-ts-utils" },
   { "jose-elias-alvarez/null-ls.nvim" },
   {
