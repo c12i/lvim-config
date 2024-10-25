@@ -6,7 +6,7 @@ local plugins = {
   },
   {
     "mrcjkb/rustaceanvim",
-    version = "5",
+    version = "^5",
     lazy = false,
   },
   {
