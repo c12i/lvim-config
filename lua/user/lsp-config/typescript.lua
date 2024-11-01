@@ -11,7 +11,7 @@ M.setup = function()
 	-- configure TypeScript language server
 	local lspconfig = require("lspconfig")
 	lspconfig.tsserver.setup({
-		on_attach = function(client, bufnr)
+		on_attach = function(client, _)
 			-- auto-imports
 			-- client.resolved_capabilities.document_formatting = false
 			local ts_utils = require("nvim-lsp-ts-utils")

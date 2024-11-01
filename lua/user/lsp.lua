@@ -36,15 +36,6 @@ vim.diagnostic.config({
 	},
 })
 
--- Configure the Lua formatter (stylua)
-local formatters = require("lvim.lsp.null-ls.formatters")
-formatters.setup({
-	{
-		command = "stylua",
-		filetypes = { "lua" },
-	},
-})
-
 -- Customize diagnostic signs
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do
