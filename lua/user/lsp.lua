@@ -21,6 +21,7 @@ formatters.setup({
 	},
 })
 
+-- Enable treesitter matchup module for enhanced % navigation and highlighting
 lvim.builtin.treesitter.matchup.enable = true
 
 -- Enable diagnostic signs in the gutter
