@@ -13,7 +13,7 @@ lvim.builtin.nvimtree.setup.view.width = 35
 
 -- show mode in status line
 lvim.builtin.lualine.sections.lualine_a = {
-  { "mode", color = { gui = "bold" } }
+	{ "mode", color = { gui = "bold" } },
 }
 
 -- Plugin management
@@ -31,3 +31,5 @@ require("user.telescope").setup()
 -- language specific LSP configurations
 require("user.lsp-servers.typescript").setup()
 require("user.lsp-servers.vue").setup()
+require("user.lsp-servers.svelte").setup()
+require("user.lsp-servers.html").setup()
