@@ -1,20 +1,25 @@
--- Vue language server setup 
-
+-- Vue language server setup with enhanced features
 local M = {}
 
 M.setup = function()
-  --configure volar (vue lsp)
   local lspconfig = require('lspconfig')
+  
+  -- Configure Volar (Vue LSP)
   lspconfig.volar.setup({
-    filetypes = { 'vue', 'json' },
-    documentFeatures = {
-      documentSymbol = true,
-      documentColor = true,
-      documentFormatting = {
-        defaultPrintWidth = 100,
-      },
-      documentHighlight = true,
+    init_options = {
+      vue = {
+        hybridMode = false,
+      }
     },
+    settings = {
+      volar = {
+        autoImportComponent = true,
+        autoCompleteRefs = true,
+      },
+      completion = {
+        autoImportComponent = true,
+      }
+    }
   })
 end
 

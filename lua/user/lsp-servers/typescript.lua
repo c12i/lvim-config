@@ -5,16 +5,17 @@ local M = {}
 M.setup = function()
   -- enable TypeScript language server
   lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(function(server)
-    return server ~= "tsserver"
+    return server ~= 'tsserver'
   end, lvim.lsp.automatic_configuration.skipped_servers)
 
   -- configure TypeScript language server
   local lspconfig = require('lspconfig')
+
   lspconfig.tsserver.setup({
     on_attach = function(client, bufnr)
       -- auto-imports
       -- client.resolved_capabilities.document_formatting = false
-      local ts_utils = require("nvim-lsp-ts-utils")
+      local ts_utils = require('nvim-lsp-ts-utils')
       ts_utils.setup({
         auto_inlay_hints = true,
         import_all_scan_buffers = 100,
@@ -24,6 +25,16 @@ M.setup = function()
     end,
     flags = {
       debounce_text_changes = 150,
+    },
+    init_options = {
+      plugins = {
+        -- configure vue-typescript-plugin
+        {
+          name = '@vue/typescript-plugin',
+          location = '~/.local/share/lvim/mason/packages/vue-language-server',
+          languages = { 'vue' },
+        }
+      }
     },
   })
 end

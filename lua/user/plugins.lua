@@ -44,11 +44,6 @@ local plugins = {
   { "tpope/vim-fugitive" },
   { "mbbill/undotree" },
   {
-    "iamcco/markdown-preview.nvim",
-    build = "cd app && npm install",
-    ft = "markdown"
-  },
-  {
     "nvim-telescope/telescope-file-browser.nvim",
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
   },
