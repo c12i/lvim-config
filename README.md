@@ -1,3 +1,3 @@
 # lvim-config
 
-My lunar vim configurations
+lunar vim neovim configurations

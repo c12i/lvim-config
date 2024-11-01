@@ -30,3 +30,4 @@ require("user.telescope").setup()
 
 -- language specific LSP configurations
 require("user.lsp-servers.typescript").setup()
+require("user.lsp-servers.vue").setup()

@@ -1,4 +1,4 @@
--- Typescript language server configurations
+-- Typescript language server setup
 
 local M = {}
 
