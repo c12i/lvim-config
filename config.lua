@@ -29,8 +29,8 @@ require("user.lsp")
 require("user.telescope").setup()
 
 -- language specific LSP configurations
-require("user.lsp-servers.typescript").setup()
-require("user.lsp-servers.vue").setup()
-require("user.lsp-servers.svelte").setup()
-require("user.lsp-servers.html").setup()
-require("user.lsp-servers.terraform").setup()
+require("user.lsp-config.typescript").setup()
+require("user.lsp-config.vue").setup()
+require("user.lsp-config.svelte").setup()
+require("user.lsp-config.html").setup()
+require("user.lsp-config.terraform").setup()
