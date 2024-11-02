@@ -5,6 +5,7 @@
 
 -- General settings
 lvim.colorscheme = "gruvbox"
+vim.o.background = "dark" -- "light" or "dark"
 lvim.format_on_save.enabled = true
 vim.opt.relativenumber = true
 -- enable auto-completion
