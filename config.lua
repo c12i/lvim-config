@@ -1,19 +1,16 @@
--- Read the docs: https://www.lunarvim.org/docs/configuration
--- Video Tutorials: https://www.youtube.com/watch?v=sFA9kX-Ud_c&list=PLhoH5vyxr6QqGu0i7tt_XoVK9v-KvZ3m6
--- Forum: https://www.reddit.com/r/lunarvim/
--- Discord: https://discord.com/invite/Xb9B4Ny
+-- Root configurations
+-- Docs: https://www.lunarvim.org/docs/configuration
 
--- General settings
+-- Theme and colorscheme settings
 lvim.colorscheme = "gruvbox"
 vim.o.background = "dark" -- "light" or "dark"
-lvim.format_on_save.enabled = true
-vim.opt.relativenumber = true
--- enable auto-completion
-lvim.builtin.cmp.enabled = true
-lvim.builtin.nvimtree.setup.view.width = 35
 
--- show mode in status line
-lvim.builtin.lualine.sections.lualine_a = {
+-- Other general settings
+vim.opt.relativenumber = true
+lvim.format_on_save.enabled = true
+lvim.builtin.cmp.enabled = true -- Enable auto-completion
+lvim.builtin.nvimtree.setup.view.width = 35
+lvim.builtin.lualine.sections.lualine_a = { -- Show mode in status line
 	{ "mode", color = { gui = "bold" } },
 }
 
