@@ -62,8 +62,11 @@ M.setup = function()
 	-- Configure Emmet for better HTML/CSS completion
 	lspconfig.emmet_ls.setup({
 		filetypes = {
-			"css",
 			"html",
+			"css",
+			"sass",
+			"scss",
+			"less",
 		},
 		init_options = {
 			html = {
