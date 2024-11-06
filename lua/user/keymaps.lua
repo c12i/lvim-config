@@ -32,3 +32,6 @@ lvim.keys.normal_mode["<leader>U"] = ":UndotreeToggle<CR>"
 -- Todo keymaps
 lvim.keys.normal_mode["<leader>tt"] = ":TodoTelescope<CR>"
 lvim.keys.normal_mode["<leader>tl"] = ":TodoLocList<CR>"
+
+-- Glow markdown preview keymaps
+lvim.keys.normal_mode["<leader>md"] = ":Glow<CR>"
