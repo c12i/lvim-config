@@ -5,6 +5,7 @@ local M = {}
 M.setup = function()
 	-- configure Terraform LSP
 	local lspconfig = require("lspconfig")
+
 	lspconfig.terraformls.setup({
 		cmd = { "terraform-ls", "serve" },
 		filetypes = { "terraform", "tf", "terraform-vars", "hcl" },

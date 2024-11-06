@@ -10,6 +10,7 @@ M.setup = function()
 
 	-- configure TypeScript language server
 	local lspconfig = require("lspconfig")
+
 	lspconfig.tsserver.setup({
 		on_attach = function(client, _)
 			-- auto-imports

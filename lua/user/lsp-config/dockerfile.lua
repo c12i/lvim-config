@@ -4,6 +4,7 @@ local M = {}
 
 M.setup = function()
 	local lspconfig = require("lspconfig")
+
 	-- Configure Dockerfile LSP
 	lspconfig.dockerls.setup({
 		cmd = { "docker-langserver", "--stdio" },

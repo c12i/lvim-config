@@ -4,6 +4,7 @@ local M = {}
 M.setup = function()
 	-- Configure the Lua formatter (stylua)
 	local formatters = require("lvim.lsp.null-ls.formatters")
+
 	formatters.setup({
 		{
 			command = "stylua",

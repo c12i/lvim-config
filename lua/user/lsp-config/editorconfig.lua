@@ -5,6 +5,7 @@ local M = {}
 
 M.setup = function()
 	local lspconfig = require("lspconfig")
+
 	-- Configure EditorConfig LSP
 	lspconfig.editorconfig.setup({
 		cmd = { "editorconfig-checker" },

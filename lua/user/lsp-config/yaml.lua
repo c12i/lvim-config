@@ -1,5 +1,4 @@
 -- YAML LSP customization
-
 local M = {}
 
 M.setup = function()
@@ -14,38 +13,30 @@ M.setup = function()
 					["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
 					-- GitLab CI schema
 					["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = {
-						"/.gitlab-ci.yml",
-						".gitlab-ci.yml",
+						"/.gitlab-ci.{yaml,yml}",
+						".gitlab-ci.{yaml,yml}",
 					},
 					-- Kubernetes schemas
-					["https://raw.githubusercontent.com/kubernetes/kubernetes/master/api/openapi-spec/v3/apis__apps_v1.json"] = {
-						"/*deployment*.yaml",
-						"/*deployment*.yml",
+					["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.28.3-standalone-strict/deployment.json"] = {
+						"**/deployment.{yaml,yml}",
+						"**/*deployment*.{yaml,yml}",
 					},
-					["https://raw.githubusercontent.com/kubernetes/kubernetes/master/api/openapi-spec/v3/apis__v1.json"] = {
-						"/*service*.yaml",
-						"/*service*.yml",
-						"/*configmap*.yaml",
-						"/*configmap*.yml",
-						"/*secret*.yaml",
-						"/*secret*.yml",
+					["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.28.3-standalone-strict/service.json"] = {
+						"**/service.{yaml,yml}",
+						"**/*service*.{yaml,yml}",
 					},
-					["https://raw.githubusercontent.com/kubernetes/kubernetes/master/api/openapi-spec/v3/apis__networking.k8s.io_v1.json"] = {
-						"/*ingress*.yaml",
-						"/*ingress*.yml",
+					["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.28.3-standalone-strict/ingress.json"] = {
+						"**/ingress.{yaml,yml}",
+						"**/*ingress*.{yaml,yml}",
 					},
-					["https://raw.githubusercontent.com/kubernetes/kubernetes/master/api/openapi-spec/v3/apis__batch_v1.json"] = {
-						"/*job*.yaml",
-						"/*job*.yml",
-						"/*cronjob*.yaml",
-						"/*cronjob*.yml",
+					["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.28.3-standalone-strict/configmap.json"] = {
+						"**/configmap.{yaml,yml}",
+						"**/*configmap*.{yaml,yml}",
 					},
-					["https://raw.githubusercontent.com/kubernetes/kubernetes/master/api/openapi-spec/v3/apis__autoscaling_v2.json"] = {
-						"/*hpa*.yaml",
-						"/*hpa*.yml",
-						"/*horizontalpodautoscaler*.yaml",
-						"/*horizontalpodautoscaler*.yml",
-					},
+					-- Kustomize schema
+					["https://json.schemastore.org/kustomization.json"] = "**/kustomization.{yaml,yml}",
+					-- Helm chart schema
+					["https://json.schemastore.org/chart.json"] = "**/Chart.yaml",
 				},
 				validate = true,
 				completion = true,
@@ -56,6 +47,9 @@ M.setup = function()
 				customTags = {
 					"!reference sequence", -- For GitLab CI !reference tags
 					"!include mapping", -- For GitLab CI includes
+				},
+				schemaStore = {
+					enable = false, -- Disable schemaStore to prevent automatic schema detection
 				},
 			},
 		},

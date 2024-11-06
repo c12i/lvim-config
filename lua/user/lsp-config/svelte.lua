@@ -5,6 +5,7 @@ local M = {}
 M.setup = function()
 	-- configure Svelte language server
 	local lspconfig = require("lspconfig")
+
 	lspconfig.svelte.setup({
 		filetypes = { "svelte" },
 
