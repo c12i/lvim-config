@@ -8,13 +8,12 @@ local function map(mode, lhs, rhs, opts)
 end
 
 -- Vim fugitive keymaps
-map("n", "<leader>gs", ":Git<CR>")
-map("n", "<leader>gc", ":Git commit<CR>")
-map("n", "<leader>gp", ":Git push<CR>")
+lvim.keys.normal_mode["<leader>gt"] = ":Git<CR>"
+lvim.keys.normal_mode["<leader>gp"] = ":Git push<CR>"
 
 -- Telescope keymaps
-map("n", "<leader>fb", ":Telescope buffers<CR>")
-map("n", "<leader>fh", ":Telescope help_tags<CR>")
+lvim.keys.normal_mode["<leader>fb"] = ":Telescope buffers<CR>"
+lvim.keys.normal_mode["<leader>fh"] = ":Telescope help_tags<CR>"
 
 -- Spectre keymaps
 map("n", "<c-s>", "<cmd>lua require('spectre').toggle()<CR>", { desc = "Toggle Spectre" })
