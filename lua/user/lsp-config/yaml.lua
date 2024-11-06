@@ -17,6 +17,35 @@ M.setup = function()
 						"/.gitlab-ci.yml",
 						".gitlab-ci.yml",
 					},
+					-- Kubernetes schemas
+					["https://raw.githubusercontent.com/kubernetes/kubernetes/master/api/openapi-spec/v3/apis__apps_v1.json"] = {
+						"/*deployment*.yaml",
+						"/*deployment*.yml",
+					},
+					["https://raw.githubusercontent.com/kubernetes/kubernetes/master/api/openapi-spec/v3/apis__v1.json"] = {
+						"/*service*.yaml",
+						"/*service*.yml",
+						"/*configmap*.yaml",
+						"/*configmap*.yml",
+						"/*secret*.yaml",
+						"/*secret*.yml",
+					},
+					["https://raw.githubusercontent.com/kubernetes/kubernetes/master/api/openapi-spec/v3/apis__networking.k8s.io_v1.json"] = {
+						"/*ingress*.yaml",
+						"/*ingress*.yml",
+					},
+					["https://raw.githubusercontent.com/kubernetes/kubernetes/master/api/openapi-spec/v3/apis__batch_v1.json"] = {
+						"/*job*.yaml",
+						"/*job*.yml",
+						"/*cronjob*.yaml",
+						"/*cronjob*.yml",
+					},
+					["https://raw.githubusercontent.com/kubernetes/kubernetes/master/api/openapi-spec/v3/apis__autoscaling_v2.json"] = {
+						"/*hpa*.yaml",
+						"/*hpa*.yml",
+						"/*horizontalpodautoscaler*.yaml",
+						"/*horizontalpodautoscaler*.yml",
+					},
 				},
 				validate = true,
 				completion = true,
