@@ -13,6 +13,10 @@ lvim.builtin.nvimtree.setup.view.width = 35
 lvim.builtin.lualine.sections.lualine_a = { -- Show mode in status line
 	{ "mode", color = { gui = "bold" } },
 }
+-- Foldclose
+vim.opt.foldlevel = 99
+vim.opt.foldmethod = "expr" -- alts: "sytax" or "indent"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 -- Plugin management
 require("user.plugins")
