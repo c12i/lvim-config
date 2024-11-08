@@ -37,6 +37,10 @@ M.setup = function()
 					["https://json.schemastore.org/kustomization.json"] = "**/kustomization.{yaml,yml}",
 					-- Helm chart schema
 					["https://json.schemastore.org/chart.json"] = "**/Chart.yaml",
+					-- (temporary) Holochain schemas
+					["https://raw.githubusercontent.com/holochain/holochain/refs/heads/develop/crates/hc_bundle/schema/dna-manifest.schema.json"] = "**/dna.{yaml,yml}",
+					["https://raw.githubusercontent.com/holochain/holochain/refs/heads/develop/crates/hc_bundle/schema/happ-manifest.schema.json"] = "**/happ.{yaml,yml}",
+					["https://raw.githubusercontent.com/holochain/holochain/refs/heads/develop/crates/hc_bundle/schema/web-happ-manifest.schema.json"] = "**web-happ.{yaml,yml}",
 				},
 				validate = true,
 				completion = true,
