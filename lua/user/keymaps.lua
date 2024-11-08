@@ -31,3 +31,6 @@ lvim.keys.normal_mode["<leader>tl"] = ":TodoLocList<CR>"
 
 -- Glow markdown preview keymaps
 lvim.keys.normal_mode["<leader>md"] = ":Glow<CR>"
+
+-- noautocmd save
+lvim.keys.normal_mode["<leader>W"] = ":noautocmd w<CR>"
