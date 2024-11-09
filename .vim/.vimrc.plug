@@ -1,0 +1,61 @@
+call plug#begin("~/.vim/plugged")
+
+" Vim fugitive
+Plug 'tpope/vim-fugitive'
+
+" Rainbow brackets
+Plug 'luochen1990/rainbow'
+
+" NerdTREE
+Plug 'preservim/nerdtree'
+
+" Intellisense 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" NerdCommenter
+Plug 'preservim/nerdcommenter'
+
+" GruvBox color
+Plug 'morhetz/gruvbox'
+
+" Vim airline
+Plug 'vim-airline/vim-airline'
+
+" Prettier
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'branch': 'release/0.x'
+  \ }
+Plug 'sbdchd/neoformat'
+
+" Rust
+Plug 'rust-lang/rust.vim'
+
+" fzf
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+" emmet
+Plug 'mattn/emmet-vim'
+
+" .editorconfig
+Plug 'editorconfig/editorconfig-vim'
+
+" markdown
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
+
+" vim cargo
+Plug 'timonv/vim-cargo'
+
+" undotree
+Plug 'mbbill/undotree'
+
+" indentline
+Plug 'Yggdroot/indentLine'
+
+" Commentary
+Plug 'tpope/vim-commentary'
+
+call plug#end()
+
