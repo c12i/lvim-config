@@ -94,8 +94,6 @@ M.setup = function()
 		filetypes = {
 			"typescriptreact",
 			"javascriptreact",
-			"javascript",
-			"typescript",
 		},
 		init_options = {
 			html = {
