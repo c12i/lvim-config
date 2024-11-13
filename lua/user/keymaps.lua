@@ -37,3 +37,6 @@ lvim.keys.normal_mode["<leader>W"] = ":noautocmd w<CR>"
 
 -- Toggle Background
 lvim.keys.normal_mode["<leader>tb"] = ":lua vim.o.background = vim.o.background == 'dark' and 'light' or 'dark'<CR>"
+
+-- Minimap
+lvim.keys.normal_mode["<leader>mm"] = ":MinimapToggle<CR>"
