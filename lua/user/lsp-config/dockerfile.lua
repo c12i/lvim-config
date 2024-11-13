@@ -9,7 +9,13 @@ M.setup = function()
 	lspconfig.dockerls.setup({
 		cmd = { "docker-langserver", "--stdio" },
 		filetypes = { "dockerfile" },
-		root_dir = lspconfig.util.root_pattern("Dockerfile", ".dockerignore", "docker-compose.yml"),
+		root_dir = lspconfig.util.root_pattern(
+			"Dockerfile",
+			"Dockerfile.*",
+			".dockerignore",
+			"docker-compose.yml",
+			"docker-compose.yaml"
+		),
 		settings = {
 			docker = {
 				formatter = {
