@@ -7,9 +7,12 @@ local function map(mode, lhs, rhs, opts)
 	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
--- Vim fugitive keymaps
+-- Vim fuGITive keymaps
 lvim.keys.normal_mode["<leader>gt"] = ":Git<CR>"
 lvim.keys.normal_mode["<leader>gp"] = ":Git push<CR>"
+lvim.keys.normal_mode["<leader>Gf"] = ":Git fetch<CR>"
+lvim.keys.normal_mode["<leader>Gr"] = ":Git rebase"
+lvim.keys.normal_mode["<leader>Gm"] = ":Git merge"
 
 -- Telescope keymaps
 lvim.keys.normal_mode["<leader>fb"] = ":Telescope buffers<CR>"
