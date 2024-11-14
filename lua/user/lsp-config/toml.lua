@@ -30,13 +30,16 @@ M.setup = function()
 				enabled = true,
 				-- Add custom schema associations
 				customAssociations = {
-					-- Cargo.toml schema
 					[".*Cargo.toml"] = "https://taplo.tamasfe.dev/schemas/cargo.schema.json",
 					[".*/[Ww]orkspace.*/Cargo.toml"] = "https://taplo.tamasfe.dev/schemas/cargo-workspace.schema.json",
 					[".*/\\.cargo/config\\.toml"] = "https://taplo.tamasfe.dev/schemas/cargo-config.schema.json",
+					[".*/rustfmt.toml"] = "https://taplo.tamasfe.dev/schemas/rustfmt.schema.json",
+					[".*rust-toolchain.toml"] = "https://taplo.tamasfe.dev/schemas/rust-toolchain.schema.json",
 				},
 				-- Repository paths for schemas
-				repositories = {},
+				repositories = {
+					"https://taplo.tamasfe.dev/schemas/",
+				},
 			},
 			-- Taplo specific settings
 			taplo = {
