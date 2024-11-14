@@ -32,6 +32,7 @@ require("user.telescope").setup()
 
 -- language specific LSP configurations
 require("user.lsp-config.dockerfile").setup()
+require("user.lsp-config.go").setup()
 require("user.lsp-config.html").setup()
 require("user.lsp-config.json").setup()
 require("user.lsp-config.lua").setup()
