@@ -18,6 +18,11 @@ vim.opt.foldlevel = 99
 vim.opt.foldmethod = "expr" -- alts: "sytax" or "indent"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
+-- Simple spellchecking
+-- https://neovim.io/doc/user/spell.html
+vim.opt.spell = true
+vim.opt.spelllang = { "en" }
+
 -- Plugin management
 require("user.plugins")
 
