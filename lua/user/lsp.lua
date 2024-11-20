@@ -1,4 +1,4 @@
--- Gloabal LSP config
+-- Global LSP config
 
 -- setup formatters
 local formatters = require("lvim.lsp.null-ls.formatters")
@@ -21,7 +21,7 @@ formatters.setup({
 	},
 })
 
--- Enable treesitter matchup module for enhanced % navigation and highlighting
+-- Enable tree-sitter matchup module for enhanced % navigation and highlighting
 lvim.builtin.treesitter.matchup.enable = true
 
 -- Enable diagnostic signs in the gutter

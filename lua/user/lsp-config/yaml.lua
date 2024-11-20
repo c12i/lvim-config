@@ -17,19 +17,19 @@ M.setup = function()
 						".gitlab-ci.{yaml,yml}",
 					},
 					-- Kubernetes schemas
-					["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.28.3-standalone-strict/deployment.json"] = {
+					["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.29.8-standalone-strict/deployment.json"] = {
 						"**/deployment.{yaml,yml}",
 						"**/*deployment*.{yaml,yml}",
 					},
-					["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.28.3-standalone-strict/service.json"] = {
+					["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.29.8-standalone-strict/service.json"] = {
 						"**/service.{yaml,yml}",
 						"**/*service*.{yaml,yml}",
 					},
-					["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.28.3-standalone-strict/ingress.json"] = {
+					["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.29.8-standalone-strict/ingress.json"] = {
 						"**/ingress.{yaml,yml}",
 						"**/*ingress*.{yaml,yml}",
 					},
-					["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.28.3-standalone-strict/configmap.json"] = {
+					["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.29.8-standalone-strict/configmap.json"] = {
 						"**/configmap.{yaml,yml}",
 						"**/*configmap*.{yaml,yml}",
 					},
@@ -37,11 +37,13 @@ M.setup = function()
 					["https://json.schemastore.org/kustomization.json"] = "**/kustomization.{yaml,yml}",
 					-- Helm chart schema
 					["https://json.schemastore.org/chart.json"] = "**/Chart.yaml",
+					-- js/ts related schemas
+					["https://json.schemastore.org/prettierrc.json"] = "**/.prettierrc.{yaml,yml}",
+					["https://json.schemastore.org/eslintrc.json"] = "**/.eslintrc.{yaml,yml}",
 					-- (temporary) Holochain schemas
 					["https://raw.githubusercontent.com/holochain/holochain/refs/heads/develop/crates/hc_bundle/schema/dna-manifest.schema.json"] = "**/dna.{yaml,yml}",
 					["https://raw.githubusercontent.com/holochain/holochain/refs/heads/develop/crates/hc_bundle/schema/happ-manifest.schema.json"] = "**/happ.{yaml,yml}",
 					["https://raw.githubusercontent.com/holochain/holochain/refs/heads/develop/crates/hc_bundle/schema/web-happ-manifest.schema.json"] = "**web-happ.{yaml,yml}",
-					["https://json.schemastore.org/prettierrc.json"] = "**/.prettierrc.{yaml,yml}",
 				},
 				validate = true,
 				completion = true,
