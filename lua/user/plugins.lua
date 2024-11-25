@@ -42,7 +42,12 @@ local plugins = {
 		end,
 	},
 	{ "tpope/vim-fugitive" },
-	{ "mbbill/undotree" },
+	{
+		"mbbill/undotree",
+		config = function()
+			vim.g.undotree_WindowLayout = 3
+		end,
+	},
 	{
 		"nvim-telescope/telescope-file-browser.nvim",
 		dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
