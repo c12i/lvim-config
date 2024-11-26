@@ -23,6 +23,31 @@ vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.spell = true
 vim.opt.spelllang = { "en" }
 
+-- Disable spell check for specific filetypes/buftypes
+vim.api.nvim_create_autocmd({ "FileType", "BufEnter" }, {
+	pattern = "*",
+	callback = function()
+		local disabled_spell = {
+			-- Filetypes
+			["NvimTree"] = true,
+			["fugitive"] = true,
+			["gitcommit"] = true,
+			["TelescopePrompt"] = true,
+
+			-- Buftypes
+			["prompt"] = true,
+			["nofile"] = true,
+			["help"] = true,
+			["quickfix"] = true,
+			["terminal"] = true,
+		}
+
+		if disabled_spell[vim.bo.filetype] or disabled_spell[vim.bo.buftype] then
+			vim.opt_local.spell = false
+		end
+	end,
+})
+
 -- Plugin management
 require("user.plugins")
 
