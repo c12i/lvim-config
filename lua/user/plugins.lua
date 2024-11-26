@@ -101,6 +101,13 @@ local plugins = {
 		config = true,
 		cmd = "Glow",
 	},
+	{
+		"saecki/crates.nvim",
+		tag = "stable",
+		config = function()
+			require("crates").setup()
+		end,
+	},
 }
 
 lvim.plugins = plugins
