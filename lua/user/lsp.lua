@@ -12,6 +12,7 @@ formatters.setup({
 			"typescriptreact",
 			"css",
 			"scss",
+			"less",
 			"html",
 			"json",
 			"yaml",

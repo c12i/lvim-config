@@ -93,6 +93,15 @@ local plugins = {
 				enable_named_colors = false,
 				enable_tailwind = true,
 				virtual_symbol = "■",
+				exclude_buftypes = {
+					"nofile",
+					"prompt",
+					"quickfix",
+					"terminal",
+					"help",
+					"fugitive",
+					"nowrite",
+				},
 			})
 		end,
 	},
