@@ -1,6 +1,6 @@
 -- Global LSP config
 
--- setup formatters
+-- setup Prettier formatter
 local formatters = require("lvim.lsp.null-ls.formatters")
 formatters.setup({
 	{
@@ -11,6 +11,7 @@ formatters.setup({
 			"javascriptreact",
 			"typescriptreact",
 			"css",
+			"sass",
 			"scss",
 			"less",
 			"html",
