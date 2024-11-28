@@ -24,6 +24,9 @@ M.setup = function()
 		h = { "<cmd>Telescope help_tags<cr>", "Help" },
 	}
 
+	-- Ignore content from the `.git` folder in search results
+	table.insert(lvim.builtin.telescope.defaults.file_ignore_patterns, ".git/")
+
 	lvim.builtin.telescope.on_config_done = function(telescope)
 		pcall(telescope.load_extension, "fzf")
 	end
