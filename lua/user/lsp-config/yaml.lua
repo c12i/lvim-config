@@ -44,6 +44,7 @@ M.setup = function()
 					["https://raw.githubusercontent.com/holochain/holochain/refs/heads/develop/crates/hc_bundle/schema/dna-manifest.schema.json"] = "**/dna.{yaml,yml}",
 					["https://raw.githubusercontent.com/holochain/holochain/refs/heads/develop/crates/hc_bundle/schema/happ-manifest.schema.json"] = "**/happ.{yaml,yml}",
 					["https://raw.githubusercontent.com/holochain/holochain/refs/heads/develop/crates/hc_bundle/schema/web-happ-manifest.schema.json"] = "**web-happ.{yaml,yml}",
+					["https://raw.githubusercontent.com/holochain/holochain/refs/heads/feat/generate-conductor-config-schema/crates/holochain_conductor_api/schemas/conductor_config.json"] = "**conductor-config.{yaml,yml}",
 				},
 				validate = true,
 				completion = true,
