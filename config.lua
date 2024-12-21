@@ -15,7 +15,7 @@ lvim.builtin.lualine.sections.lualine_a = { -- Show mode in status line
 }
 -- Foldclose
 vim.opt.foldlevel = 99
-vim.opt.foldmethod = "expr" -- alts: "sytax" or "indent"
+vim.opt.foldmethod = "expr" -- alts: "syntax" or "indent"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 -- Simple spellchecking
