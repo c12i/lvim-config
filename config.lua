@@ -23,7 +23,8 @@ vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.spell = true
 vim.opt.spelllang = { "en" }
 
--- lvim.transparent_window = true
+-- XXX: Setting this breaks light mode
+lvim.transparent_window = true
 
 -- Disable spell check for specific filetypes/buftypes
 vim.api.nvim_create_autocmd({ "FileType", "BufEnter" }, {
