@@ -24,7 +24,7 @@ vim.opt.spell = true
 vim.opt.spelllang = { "en" }
 
 -- XXX: Setting this breaks light mode
-lvim.transparent_window = true
+-- lvim.transparent_window = true
 
 -- Disable spell check for specific filetypes/buftypes
 vim.api.nvim_create_autocmd({ "FileType", "BufEnter" }, {
