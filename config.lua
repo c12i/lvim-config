@@ -23,6 +23,11 @@ vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.spell = true
 vim.opt.spelllang = { "en" }
 
+-- ensure the SSH agent env var is available
+vim.env.SSH_AUTH_SOCK = os.getenv("SSH_AUTH_SOCK")
+vim.env.SSH_AGENT_PID = os.getenv("SSH_AGENT_PID")
+vim.env.GIT_SSH_COMMAND = "ssh -i ~/.keys/gh"
+
 -- XXX: Setting this breaks light mode
 -- lvim.transparent_window = true
 
