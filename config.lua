@@ -18,18 +18,28 @@ vim.opt.foldlevel = 99
 vim.opt.foldmethod = "expr" -- alts: "syntax" or "indent"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
--- Simple spellchecking
--- https://neovim.io/doc/user/spell.html
-vim.opt.spell = true
-vim.opt.spelllang = { "en" }
-
 -- ensure the SSH agent env var is available
 vim.env.SSH_AUTH_SOCK = os.getenv("SSH_AUTH_SOCK")
 vim.env.SSH_AGENT_PID = os.getenv("SSH_AGENT_PID")
 vim.env.GIT_SSH_COMMAND = "ssh -i ~/.keys/gh"
 
+-- Optimizations for larger codebases
+lvim.reload_config_on_save = false
+lvim.builtin.nvimtree.setup.filters.custom = {
+	"node_modules",
+	".git",
+	"dist",
+	"build",
+	"target",
+}
+
 -- XXX: Setting this breaks light mode
 -- lvim.transparent_window = true
+
+-- Simple spellchecking
+-- https://neovim.io/doc/user/spell.html
+vim.opt.spell = true
+vim.opt.spelllang = { "en" }
 
 -- Disable spell check for specific filetypes/buftypes
 vim.api.nvim_create_autocmd({ "FileType", "BufEnter" }, {
