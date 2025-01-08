@@ -41,5 +41,8 @@ lvim.keys.normal_mode["<leader>W"] = ":noautocmd w<CR>"
 -- Toggle Background
 lvim.keys.normal_mode["<leader>tb"] = ":lua vim.o.background = vim.o.background == 'dark' and 'light' or 'dark'<CR>"
 
+-- Toggle relative number
+lvim.keys.normal_mode["<leader>tn"] = ":lua vim.o.relativenumber = not vim.o.relativenumber<CR>"
+
 -- Minimap
 lvim.keys.normal_mode["<leader>mm"] = ":MinimapToggle<CR>"
