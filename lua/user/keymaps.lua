@@ -44,5 +44,8 @@ lvim.keys.normal_mode["<leader>tb"] = ":lua vim.o.background = vim.o.background 
 -- Toggle relative number
 lvim.keys.normal_mode["<leader>tn"] = ":lua vim.o.relativenumber = not vim.o.relativenumber<CR>"
 
+-- Toggle inlay hints
+lvim.keys.normal_mode["<leader>th"] = ":lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<CR>"
+
 -- Minimap
 lvim.keys.normal_mode["<leader>mm"] = ":MinimapToggle<CR>"
