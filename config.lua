@@ -21,6 +21,7 @@ vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 -- ensure the SSH agent env var is available
 vim.env.SSH_AUTH_SOCK = os.getenv("SSH_AUTH_SOCK")
 vim.env.SSH_AGENT_PID = os.getenv("SSH_AGENT_PID")
+-- TODO: Move this to env var
 vim.env.GIT_SSH_COMMAND = "ssh -i ~/.keys/gh"
 
 -- Optimizations for larger codebases

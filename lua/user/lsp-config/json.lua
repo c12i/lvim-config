@@ -31,7 +31,7 @@ M.setup = function()
 						url = "https://json.schemastore.org/stylelintrc.json",
 					},
 				},
-				validate = { enable = true },
+				validate = { enable = false },
 				format = { enable = true },
 			},
 		},
