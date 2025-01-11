@@ -38,6 +38,8 @@ vim.diagnostic.config({
 	},
 })
 
+vim.lsp.inlay_hint.enable = true
+
 -- Customize diagnostic signs
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do
