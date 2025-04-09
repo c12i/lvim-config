@@ -21,8 +21,6 @@ vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 -- ensure the SSH agent env var is available
 vim.env.SSH_AUTH_SOCK = os.getenv("SSH_AUTH_SOCK")
 vim.env.SSH_AGENT_PID = os.getenv("SSH_AGENT_PID")
--- TODO: Move this to env var
-vim.env.GIT_SSH_COMMAND = "ssh -i ~/.keys/gh"
 
 -- Optimizations for larger codebases
 lvim.reload_config_on_save = false
@@ -83,6 +81,7 @@ require("user.telescope").setup()
 require("user.lsp-config.bash").setup()
 require("user.lsp-config.dockerfile").setup()
 require("user.lsp-config.go").setup()
+require("user.lsp-config.hbs").setup()
 require("user.lsp-config.html").setup()
 require("user.lsp-config.json").setup()
 require("user.lsp-config.lua").setup()
