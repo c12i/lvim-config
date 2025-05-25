@@ -126,6 +126,11 @@ local plugins = {
 			require("package-info").setup()
 		end,
 	},
+	{
+		"pmizio/typescript-tools.nvim",
+		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+		opts = {},
+	},
 }
 
 lvim.plugins = plugins
