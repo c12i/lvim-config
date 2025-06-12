@@ -49,3 +49,13 @@ lvim.keys.normal_mode["<leader>th"] = ":lua vim.lsp.inlay_hint.enable(not vim.ls
 
 -- Minimap
 lvim.keys.normal_mode["<leader>mm"] = ":MinimapToggle<CR>"
+
+-- Vsplit toggle
+lvim.keys.normal_mode["<leader>sv"] = function()
+	local wins = vim.api.nvim_tabpage_list_wins(0)
+	if #wins == 1 then
+		vim.cmd("vsplit")
+	else
+		vim.cmd("close")
+	end
+end
