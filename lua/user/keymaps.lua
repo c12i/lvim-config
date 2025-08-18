@@ -50,6 +50,9 @@ lvim.keys.normal_mode["<leader>th"] = ":lua vim.lsp.inlay_hint.enable(not vim.ls
 -- Minimap
 lvim.keys.normal_mode["<leader>mm"] = ":MinimapToggle<CR>"
 
+-- TSToolsOrganizeImports
+lvim.keys.normal_mode["<leader>ti"] = ":TSToolsOrganizeImports<CR>"
+
 -- Vsplit toggle
 lvim.keys.normal_mode["<leader>sv"] = function()
 	local wins = vim.api.nvim_tabpage_list_wins(0)

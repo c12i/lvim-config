@@ -1,4 +1,4 @@
--- Svelte language server setup
+-- HTML language server setup
 
 local M = {}
 
@@ -16,11 +16,14 @@ M.setup = function()
 		},
 	}
 
-	-- tailwindcss
+	-- Ensure LSP servers are installed
 	vim.list_extend(lvim.lsp.installer.setup.ensure_installed, {
 		"tailwindcss",
+		"cssls",
+		"emmet_ls",
 	})
 
+	-- CSS Language Server
 	lspconfig.cssls.setup({
 		capabilities = capabilities,
 		settings = {
@@ -60,7 +63,35 @@ M.setup = function()
 		},
 	})
 
-	-- Configure Emmet for better HTML/CSS completion
+	-- Tailwind CSS Language Server
+	lspconfig.tailwindcss.setup({
+		capabilities = capabilities,
+		filetypes = {
+			"html",
+			"css",
+			"scss",
+			"javascript",
+			"typescript",
+			"javascriptreact",
+			"typescriptreact",
+			"svelte",
+			"vue",
+		},
+		init_options = {
+			userLanguages = {
+				typescript = "javascript",
+				typescriptreact = "javascript",
+			},
+		},
+		settings = {
+			tailwindCSS = {
+				emmetCompletions = true,
+				validate = true,
+			},
+		},
+	})
+
+	-- Emmet LSP
 	lspconfig.emmet_ls.setup({
 		filetypes = {
 			"html",
@@ -72,7 +103,6 @@ M.setup = function()
 		init_options = {
 			html = {
 				options = {
-					-- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
 					["bem.enabled"] = true,
 				},
 			},
