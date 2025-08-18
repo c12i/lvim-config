@@ -131,6 +131,7 @@ local plugins = {
 		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
 		opts = {},
 	},
+	{ "augmentcode/augment.vim" },
 }
 
 lvim.plugins = plugins
