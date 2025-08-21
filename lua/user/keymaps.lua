@@ -62,3 +62,7 @@ lvim.keys.normal_mode["<leader>sv"] = function()
 		vim.cmd("close")
 	end
 end
+
+-- Augument code
+lvim.keys.normal_mode["<leader>ac"] = ":Augment chat<CR>"
+lvim.keys.normal_mode["<leader>aC"] = ":Augment chat-toggle<CR>"
